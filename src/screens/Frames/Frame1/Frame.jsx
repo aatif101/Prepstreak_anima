@@ -1,6 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 export const Frame = () => {
+  const navigate = useNavigate();
   return (
     <div
       className="w-full min-w-[1390px] min-h-[902px] flex"
@@ -9,13 +11,13 @@ export const Frame = () => {
       <div className="w-[1390px] h-[902px] relative bg-[linear-gradient(180deg,rgba(245,235,224,1)_0%,rgba(253,246,237,1)_100%)]">
         <header className="flex w-[335px] h-[164px] items-center justify-around gap-[826.15px] px-10 py-0 absolute top-[317px] left-[528px] bg-transparent">
           <div className="flex w-[261px] h-20 items-start gap-4 relative mr-[-6.00px]">
-            <button className="all-[unset] box-border relative w-[115.73px] h-[54px] bg-[#f5ebe0] rounded-[16777200px] border-[3px] border-solid border-[#2b2622] shadow-[5px_5px_0px_#2b2622d9]">
+            <button onClick={() => navigate('/dashboard')} className="all-[unset] box-border relative w-[115.73px] h-[54px] bg-[#f5ebe0] rounded-[16777200px] border-[3px] border-solid border-[#2b2622] shadow-[5px_5px_0px_#2b2622d9] cursor-pointer">
               <div className="absolute top-[18px] left-[38px] [font-family:'Space_Grotesk',Helvetica] font-bold text-[#2b2622] text-sm text-center tracking-[0.28px] leading-5 whitespace-nowrap">
                 LOGIN
               </div>
             </button>
 
-            <button className="all-[unset] box-border relative flex-1 grow h-[54px] bg-[#ef473a] rounded-[16777200px] border-[3px] border-solid border-[#2b2622] shadow-[5px_5px_0px_#2b2622d9]">
+            <button onClick={() => navigate('/get-started')} className="all-[unset] box-border relative flex-1 grow h-[54px] bg-[#ef473a] rounded-[16777200px] border-[3px] border-solid border-[#2b2622] shadow-[5px_5px_0px_#2b2622d9] cursor-pointer">
               <div className="absolute top-[18px] left-[38px] [font-family:'Space_Grotesk',Helvetica] font-bold text-white text-sm text-center tracking-[0.28px] leading-5 whitespace-nowrap">
                 SIGN UP
               </div>
