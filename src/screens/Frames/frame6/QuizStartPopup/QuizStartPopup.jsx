@@ -1,6 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 export const QuizStartPopup = () => {
+  const navigate = useNavigate();
+
   return (
     <div
       className="w-[1345px] h-[902px] flex bg-[#00000080]"
@@ -56,7 +59,7 @@ export const QuizStartPopup = () => {
         </div>
 
         <div className="flex ml-[52px] w-[664px] h-[66px] relative mt-12 items-start gap-4">
-          <button className="all-[unset] box-border w-[161.5px] relative h-[66px] rounded-[16777200px] border-[3px] border-solid border-[#2b2622]">
+          <button onClick={() => navigate('/quiz/setup/step2')} className="all-[unset] box-border w-[161.5px] relative h-[66px] rounded-[16777200px] border-[3px] border-solid border-[#2b2622] cursor-pointer hover:bg-[#f5ebe0] transition-colors">
             <img
               className="top-[23px] left-[43px] absolute w-5 h-5"
               alt="Icon"
@@ -68,7 +71,7 @@ export const QuizStartPopup = () => {
             </div>
           </button>
 
-          <button className="all-[unset] box-border flex-1 grow bg-[#1e5f4d] shadow-[5px_5px_0px_#2b2622d9] opacity-50 relative h-[66px] rounded-[16777200px] border-[3px] border-solid border-[#2b2622]">
+          <button onClick={() => navigate('/quiz/active')} className="all-[unset] box-border flex-1 grow bg-[#1e5f4d] shadow-[5px_5px_0px_#2b2622d9] relative h-[66px] rounded-[16777200px] border-[3px] border-solid border-[#2b2622] cursor-pointer hover:shadow-[3px_3px_0px_#2b2622d9] transition-all">
             <div className="absolute top-[22px] left-[185px] [font-family:'Space_Grotesk',Helvetica] font-bold text-white text-base text-center tracking-[0.32px] leading-6 whitespace-nowrap">
               START QUIZ
             </div>

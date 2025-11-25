@@ -44,7 +44,7 @@ export const Sidebar = () => {
       </div>
 
       <div className="flex flex-col w-[284px] items-start gap-2 pt-5 pb-0 px-5 relative flex-1 grow">
-        <button className="all-[unset] box-border h-[60px] gap-4 pl-5 pr-0 py-0 self-stretch bg-[#ef473a] rounded-2xl border-2 border-solid border-[#2b2622] shadow-[3px_3px_0px_#2b2622b2] flex items-center relative w-full">
+        <button onClick={() => navigate('/dashboard')} className="all-[unset] box-border h-[60px] gap-4 pl-5 pr-0 py-0 self-stretch bg-[#ef473a] rounded-2xl border-2 border-solid border-[#2b2622] shadow-[3px_3px_0px_#2b2622b2] flex items-center relative w-full cursor-pointer">
           <img
             className="relative w-6 h-6"
             alt="Icon"
@@ -58,7 +58,7 @@ export const Sidebar = () => {
           </div>
         </button>
 
-        <button className="all-[unset] box-border flex h-[60px] items-center gap-4 pl-5 pr-0 py-0 relative self-stretch w-full rounded-2xl border-2 border-solid border-transparent">
+        <button onClick={() => navigate('/test/setup/step1')} className="all-[unset] box-border flex h-[60px] items-center gap-4 pl-5 pr-0 py-0 relative self-stretch w-full rounded-2xl border-2 border-solid border-transparent cursor-pointer hover:bg-[#f5ebe0] transition-colors">
           <img
             className="relative w-6 h-6"
             alt="Icon"
@@ -72,7 +72,7 @@ export const Sidebar = () => {
           </div>
         </button>
 
-        <button className="all-[unset] box-border flex h-[60px] items-center gap-4 pl-5 pr-0 py-0 relative self-stretch w-full rounded-2xl border-2 border-solid border-transparent">
+        <button onClick={() => navigate('/quiz/setup/step1')} className="all-[unset] box-border flex h-[60px] items-center gap-4 pl-5 pr-0 py-0 relative self-stretch w-full rounded-2xl border-2 border-solid border-transparent cursor-pointer hover:bg-[#f5ebe0] transition-colors">
           <img
             className="relative w-6 h-6"
             alt="Icon"
@@ -86,7 +86,7 @@ export const Sidebar = () => {
           </div>
         </button>
 
-        <button className="all-[unset] box-border h-[60px] gap-4 pl-5 pr-0 py-0 self-stretch rounded-2xl border-2 border-solid border-transparent flex items-center relative w-full">
+        <button onClick={() => navigate('/badges')} className="all-[unset] box-border h-[60px] gap-4 pl-5 pr-0 py-0 self-stretch rounded-2xl border-2 border-solid border-transparent flex items-center relative w-full cursor-pointer hover:bg-[#f5ebe0] transition-colors">
           <img
             className="relative w-6 h-6"
             alt="Icon"
@@ -100,7 +100,7 @@ export const Sidebar = () => {
           </div>
         </button>
 
-        <button className="all-[unset] box-border flex h-[60px] items-center gap-4 pl-5 pr-0 py-0 relative self-stretch w-full rounded-2xl border-2 border-solid border-transparent">
+        <button onClick={() => navigate('/profile')} className="all-[unset] box-border flex h-[60px] items-center gap-4 pl-5 pr-0 py-0 relative self-stretch w-full rounded-2xl border-2 border-solid border-transparent cursor-pointer hover:bg-[#f5ebe0] transition-colors">
           <img
             className="relative w-6 h-6"
             alt="Icon"

@@ -1,13 +1,16 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 export const QuizPage = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="relative w-[1345px] h-[1012px]" data-model-id="11:3147">
       <div className="flex flex-col w-[1345px] h-[119px] items-start pt-4 pb-[3px] px-[224.5px] absolute top-0 left-0 bg-white border-b-[3px] [border-bottom-style:solid] border-[#2b2622]">
         <div className="flex flex-col h-[84px] items-start gap-4 relative self-stretch w-full">
           <div className="flex h-11 items-center justify-between relative self-stretch w-full">
             <div className="flex w-[241.59px] h-10 items-center gap-3 relative">
-              <button className="all-[unset] box-border w-[94.75px] h-10 items-center gap-2 px-4 py-0 relative bg-[#f5ebe0] rounded-[16777200px] border-2 border-solid flex border-[#2b2622]">
+              <button onClick={() => navigate('/dashboard')} className="all-[unset] box-border w-[94.75px] h-10 items-center gap-2 px-4 py-0 relative bg-[#f5ebe0] rounded-[16777200px] border-2 border-solid flex border-[#2b2622] cursor-pointer hover:bg-[#e5dbd0] transition-colors">
                 <img
                   className="relative w-4 h-4"
                   alt="Icon"
@@ -176,7 +179,7 @@ export const QuizPage = () => {
           </div>
         </button>
 
-        <button className="all-[unset] box-border ml-[541.5px] w-[226.46px] h-[66px] bg-[#1e5f4d] rounded-[16777200px] border-[3px] border-solid shadow-[5px_5px_0px_#2b2622d9] opacity-50 flex border-[#2b2622]">
+        <button onClick={() => navigate('/results')} className="all-[unset] box-border ml-[541.5px] w-[226.46px] h-[66px] bg-[#1e5f4d] rounded-[16777200px] border-[3px] border-solid shadow-[5px_5px_0px_#2b2622d9] flex border-[#2b2622] cursor-pointer hover:shadow-[3px_3px_0px_#2b2622d9] transition-all">
           <div className="mt-[21.5px] w-[130px] h-6 ml-12 [font-family:'Space_Grotesk',Helvetica] font-bold text-white text-base text-center tracking-[0.32px] leading-6 whitespace-nowrap">
             SUBMIT ANSWER
           </div>

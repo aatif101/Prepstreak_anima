@@ -1,6 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 export const Frame = () => {
+  const navigate = useNavigate();
+
   return (
     <div
       className="flex flex-col h-[1050px] items-start relative bg-[linear-gradient(180deg,rgba(245,235,224,1)_0%,rgba(253,246,237,1)_100%)]"
@@ -47,7 +50,7 @@ export const Frame = () => {
           </div>
 
           <div className="flex flex-col w-[284px] items-start gap-2 pt-5 pb-0 px-5 relative flex-1 grow">
-            <button className="all-[unset] box-border flex h-[60px] items-center gap-4 pl-5 pr-0 py-0 relative self-stretch w-full rounded-2xl border-2 border-solid border-transparent">
+            <button onClick={() => navigate('/dashboard')} className="all-[unset] box-border flex h-[60px] items-center gap-4 pl-5 pr-0 py-0 relative self-stretch w-full rounded-2xl border-2 border-solid border-transparent cursor-pointer hover:bg-[#f5ebe0] transition-colors">
               <img
                 className="relative w-6 h-6"
                 alt="Icon"
@@ -61,7 +64,7 @@ export const Frame = () => {
               </div>
             </button>
 
-            <button className="all-[unset] box-border flex h-[60px] items-center gap-4 pl-5 pr-0 py-0 relative self-stretch w-full rounded-2xl border-2 border-solid border-transparent">
+            <button onClick={() => navigate('/test/setup/step1')} className="all-[unset] box-border flex h-[60px] items-center gap-4 pl-5 pr-0 py-0 relative self-stretch w-full rounded-2xl border-2 border-solid border-transparent cursor-pointer hover:bg-[#f5ebe0] transition-colors">
               <img
                 className="relative w-6 h-6"
                 alt="Icon"
@@ -75,7 +78,7 @@ export const Frame = () => {
               </div>
             </button>
 
-            <button className="all-[unset] box-border flex h-[60px] items-center gap-4 pl-5 pr-0 py-0 relative self-stretch w-full rounded-2xl border-2 border-solid border-transparent">
+            <button onClick={() => navigate('/quiz/setup/step1')} className="all-[unset] box-border flex h-[60px] items-center gap-4 pl-5 pr-0 py-0 relative self-stretch w-full rounded-2xl border-2 border-solid border-transparent cursor-pointer hover:bg-[#f5ebe0] transition-colors">
               <img
                 className="relative w-6 h-6"
                 alt="Icon"
@@ -89,7 +92,7 @@ export const Frame = () => {
               </div>
             </button>
 
-            <button className="all-[unset] box-border flex h-[60px] items-center gap-4 pl-5 pr-0 py-0 relative self-stretch w-full rounded-2xl border-2 border-solid border-transparent">
+            <button onClick={() => navigate('/badges')} className="all-[unset] box-border flex h-[60px] items-center gap-4 pl-5 pr-0 py-0 relative self-stretch w-full rounded-2xl border-2 border-solid border-transparent cursor-pointer hover:bg-[#f5ebe0] transition-colors">
               <img
                 className="relative w-6 h-6"
                 alt="Icon"
@@ -103,7 +106,7 @@ export const Frame = () => {
               </div>
             </button>
 
-            <button className="all-[unset] box-border flex h-[60px] items-center gap-4 pl-5 pr-0 py-0 relative self-stretch w-full bg-[#ef473a] rounded-2xl border-2 border-solid border-[#2b2622] shadow-[3px_3px_0px_#2b2622b2]">
+            <button onClick={() => navigate('/profile')} className="all-[unset] box-border flex h-[60px] items-center gap-4 pl-5 pr-0 py-0 relative self-stretch w-full bg-[#ef473a] rounded-2xl border-2 border-solid border-[#2b2622] shadow-[3px_3px_0px_#2b2622b2] cursor-pointer">
               <img
                 className="relative w-6 h-6"
                 alt="Icon"
@@ -118,8 +121,8 @@ export const Frame = () => {
             </button>
           </div>
 
-          <button className="all-[unset] box-border flex flex-col w-[284px] h-[103px] items-start pt-[23px] pb-0 px-5 relative border-t-[3px] [border-top-style:solid] border-[#2b2622]">
-            <button className="all-[unset] box-border flex h-[60px] items-center gap-4 pl-5 pr-0 py-0 relative self-stretch w-full rounded-2xl border-2 border-solid border-transparent">
+          <div className="flex flex-col w-[284px] h-[103px] items-start pt-[23px] pb-0 px-5 relative border-t-[3px] [border-top-style:solid] border-[#2b2622]">
+            <button onClick={() => navigate('/')} className="all-[unset] box-border flex h-[60px] items-center gap-4 pl-5 pr-0 py-0 relative self-stretch w-full rounded-2xl border-2 border-solid border-transparent cursor-pointer hover:bg-[#f5ebe0] transition-colors">
               <img
                 className="relative w-6 h-6"
                 alt="Icon"
@@ -132,11 +135,11 @@ export const Frame = () => {
                 </div>
               </div>
             </button>
-          </button>
+          </div>
         </div>
 
         <div className="absolute top-10 left-[328px] w-[977px] h-[970px] flex flex-col">
-          <button className="all-[unset] box-border flex w-[205.03px] h-12 relative items-center gap-2 px-5 py-0 bg-[#f5ebe0] rounded-[16777200px] border-2 border-solid border-[#2b2622]">
+          <button onClick={() => navigate('/dashboard')} className="all-[unset] box-border flex w-[205.03px] h-12 relative items-center gap-2 px-5 py-0 bg-[#f5ebe0] rounded-[16777200px] border-2 border-solid border-[#2b2622] cursor-pointer hover:bg-[#e5dbd0] transition-colors">
             <img
               className="relative w-5 h-5"
               alt="Icon"

@@ -1,6 +1,12 @@
 import React from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 
 export const Frame = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const isTestMode = location.pathname.includes('/test/');
+  const isQuizMode = location.pathname.includes('/quiz/');
+
   return (
     <div
       className="bg-[linear-gradient(180deg,rgba(245,235,224,1)_0%,rgba(253,246,237,1)_100%)] w-full min-w-[1345px] min-h-[902px] relative"
@@ -47,7 +53,7 @@ export const Frame = () => {
           </div>
 
           <div className="flex flex-col w-[284px] items-start gap-2 pt-5 pb-0 px-5 relative flex-1 grow">
-            <button className="all-[unset] box-border flex h-[60px] items-center gap-4 pl-5 pr-0 py-0 relative self-stretch w-full rounded-2xl border-2 border-solid border-transparent">
+            <button onClick={() => navigate('/dashboard')} className="all-[unset] box-border flex h-[60px] items-center gap-4 pl-5 pr-0 py-0 relative self-stretch w-full rounded-2xl border-2 border-solid border-transparent cursor-pointer hover:bg-[#f5ebe0] transition-colors">
               <img
                 className="relative w-6 h-6"
                 alt="Icon"
@@ -61,7 +67,7 @@ export const Frame = () => {
               </div>
             </button>
 
-            <button className="all-[unset] box-border flex h-[60px] items-center gap-4 pl-5 pr-0 py-0 relative self-stretch w-full rounded-2xl border-2 border-solid border-transparent">
+            <button onClick={() => navigate('/test/setup/step1')} className={`all-[unset] box-border flex h-[60px] items-center gap-4 pl-5 pr-0 py-0 relative self-stretch w-full rounded-2xl border-2 border-solid ${isTestMode ? 'bg-[#ef473a] border-[#2b2622] shadow-[3px_3px_0px_#2b2622b2]' : 'border-transparent'} cursor-pointer ${!isTestMode && 'hover:bg-[#f5ebe0]'} transition-colors`}>
               <img
                 className="relative w-6 h-6"
                 alt="Icon"
@@ -69,13 +75,13 @@ export const Frame = () => {
               />
 
               <div className="w-[80.82px] relative h-6">
-                <div className="absolute top-px left-0 [font-family:'Space_Grotesk',Helvetica] font-bold text-[#2b2622] text-base tracking-[0.32px] leading-6 whitespace-nowrap">
+                <div className={`absolute top-px left-0 [font-family:'Space_Grotesk',Helvetica] font-bold ${isTestMode ? 'text-white' : 'text-[#2b2622]'} text-base tracking-[0.32px] leading-6 whitespace-nowrap`}>
                   Test Mode
                 </div>
               </div>
             </button>
 
-            <button className="all-[unset] box-border flex h-[60px] items-center gap-4 pl-5 pr-0 py-0 relative self-stretch w-full bg-[#ef473a] rounded-2xl border-2 border-solid border-[#2b2622] shadow-[3px_3px_0px_#2b2622b2]">
+            <button onClick={() => navigate('/quiz/setup/step1')} className={`all-[unset] box-border flex h-[60px] items-center gap-4 pl-5 pr-0 py-0 relative self-stretch w-full rounded-2xl border-2 border-solid ${isQuizMode ? 'bg-[#ef473a] border-[#2b2622] shadow-[3px_3px_0px_#2b2622b2]' : 'border-transparent'} cursor-pointer ${!isQuizMode && 'hover:bg-[#f5ebe0]'} transition-colors`}>
               <img
                 className="relative w-6 h-6"
                 alt="Icon"
@@ -83,13 +89,13 @@ export const Frame = () => {
               />
 
               <div className="w-[62.7px] relative h-6">
-                <div className="absolute top-px left-0 [font-family:'Space_Grotesk',Helvetica] font-bold text-white text-base tracking-[0.32px] leading-6 whitespace-nowrap">
+                <div className={`absolute top-px left-0 [font-family:'Space_Grotesk',Helvetica] font-bold ${isQuizMode ? 'text-white' : 'text-[#2b2622]'} text-base tracking-[0.32px] leading-6 whitespace-nowrap`}>
                   Quizzes
                 </div>
               </div>
             </button>
 
-            <button className="all-[unset] box-border flex h-[60px] items-center gap-4 pl-5 pr-0 py-0 relative self-stretch w-full rounded-2xl border-2 border-solid border-transparent">
+            <button onClick={() => navigate('/badges')} className="all-[unset] box-border flex h-[60px] items-center gap-4 pl-5 pr-0 py-0 relative self-stretch w-full rounded-2xl border-2 border-solid border-transparent cursor-pointer hover:bg-[#f5ebe0] transition-colors">
               <img
                 className="relative w-6 h-6"
                 alt="Icon"
@@ -103,7 +109,7 @@ export const Frame = () => {
               </div>
             </button>
 
-            <button className="all-[unset] box-border flex h-[60px] items-center gap-4 pl-5 pr-0 py-0 relative self-stretch w-full rounded-2xl border-2 border-solid border-transparent">
+            <button onClick={() => navigate('/profile')} className="all-[unset] box-border flex h-[60px] items-center gap-4 pl-5 pr-0 py-0 relative self-stretch w-full rounded-2xl border-2 border-solid border-transparent cursor-pointer hover:bg-[#f5ebe0] transition-colors">
               <img
                 className="relative w-6 h-6"
                 alt="Icon"
@@ -118,8 +124,8 @@ export const Frame = () => {
             </button>
           </div>
 
-          <button className="all-[unset] box-border flex flex-col w-[284px] h-[103px] items-start pt-[23px] pb-0 px-5 relative border-t-[3px] [border-top-style:solid] border-[#2b2622]">
-            <button className="all-[unset] box-border flex h-[60px] items-center gap-4 pl-5 pr-0 py-0 relative self-stretch w-full rounded-2xl border-2 border-solid border-transparent">
+          <div className="flex flex-col w-[284px] h-[103px] items-start pt-[23px] pb-0 px-5 relative border-t-[3px] [border-top-style:solid] border-[#2b2622]">
+            <button onClick={() => navigate('/')} className="all-[unset] box-border flex h-[60px] items-center gap-4 pl-5 pr-0 py-0 relative self-stretch w-full rounded-2xl border-2 border-solid border-transparent cursor-pointer hover:bg-[#f5ebe0] transition-colors">
               <img
                 className="relative w-6 h-6"
                 alt="Icon"
@@ -132,7 +138,7 @@ export const Frame = () => {
                 </div>
               </div>
             </button>
-          </button>
+          </div>
         </div>
 
         <div className="flex mt-8 w-[993px] h-[87.19px] relative flex-col items-start">
@@ -198,7 +204,7 @@ export const Frame = () => {
             </div>
           </div>
 
-          <button className="all-[unset] box-border absolute top-[292px] left-[52px] w-[664px] h-[66px] flex gap-[9px] bg-[#1e5f4d] rounded-[16777200px] border-[3px] border-solid border-[#2b2622] shadow-[5px_5px_0px_#2b2622d9]">
+          <button onClick={() => navigate(isTestMode ? '/test/setup/step2' : '/quiz/setup/step2')} className="all-[unset] box-border absolute top-[292px] left-[52px] w-[664px] h-[66px] flex gap-[9px] bg-[#1e5f4d] rounded-[16777200px] border-[3px] border-solid border-[#2b2622] shadow-[5px_5px_0px_#2b2622d9] cursor-pointer hover:shadow-[3px_3px_0px_#2b2622d9] transition-all">
             <div className="mt-[21.5px] w-[41px] h-6 ml-[298.0px] [font-family:'Space_Grotesk',Helvetica] font-bold text-white text-base text-center tracking-[0.32px] leading-6 whitespace-nowrap">
               NEXT
             </div>
@@ -210,7 +216,7 @@ export const Frame = () => {
             />
           </button>
 
-          <button className="all-[unset] box-border absolute top-[19px] left-[27px] w-[162px] h-[66px] flex gap-[11px] rounded-[16777200px] border-[3px] border-solid border-[#2b2622]">
+          <button onClick={() => navigate('/dashboard')} className="all-[unset] box-border absolute top-[19px] left-[27px] w-[162px] h-[66px] flex gap-[11px] rounded-[16777200px] border-[3px] border-solid border-[#2b2622] cursor-pointer hover:bg-[#f5ebe0] transition-colors">
             <img
               className="ml-[43px] mt-[23px] w-5 h-5"
               alt="Icon"

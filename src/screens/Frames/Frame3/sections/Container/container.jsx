@@ -1,6 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 export const Container = () => {
+  const navigate = useNavigate();
   return (
     <div className="flex mt-10 w-[1022px] h-[1036.53px] relative flex-col items-start gap-10">
       <div className="flex flex-col w-[386px] h-[87px] items-start relative">
@@ -552,7 +554,7 @@ export const Container = () => {
       </div>
 
       <div className="grid grid-cols-2 grid-rows-[minmax(0,1fr)] h-[300px] gap-6 absolute top-[906px] left-0 w-[1022px]">
-        <div className="row-[1_/_2] col-[2_/_3] h-[138.19px] flex-col justify-center gap-3 bg-[#1e5f4d] rounded-3xl border-4 border-solid border-[#2b2622] shadow-[5px_5px_0px_#2b2622d9] flex items-center relative w-full">
+        <div onClick={() => navigate('/test/setup/step1')} className="row-[1_/_2] col-[2_/_3] h-[138.19px] flex-col justify-center gap-3 bg-[#1e5f4d] rounded-3xl border-4 border-solid border-[#2b2622] shadow-[5px_5px_0px_#2b2622d9] flex items-center relative w-full cursor-pointer hover:shadow-[3px_3px_0px_#2b2622d9] transition-all">
           <div className="flex w-[117px] h-[29px] items-center gap-3 relative">
             <div className="relative w-[120px] h-[29px] mr-[-3.00px]">
               <div className="absolute top-0.5 -left-px [font-family:'Space_Grotesk',Helvetica] font-bold text-white text-[22px] text-center tracking-[-0.22px] leading-[28.6px] whitespace-nowrap">
@@ -568,7 +570,7 @@ export const Container = () => {
           </div>
         </div>
 
-        <div className="row-[1_/_2] col-[1_/_2] h-[138.19px] flex-col justify-center gap-3 bg-[#ef473a] rounded-3xl border-4 border-solid border-[#2b2622] shadow-[5px_5px_0px_#2b2622d9] flex items-center relative w-full">
+        <div onClick={() => navigate('/quiz/setup/step1')} className="row-[1_/_2] col-[1_/_2] h-[138.19px] flex-col justify-center gap-3 bg-[#ef473a] rounded-3xl border-4 border-solid border-[#2b2622] shadow-[5px_5px_0px_#2b2622d9] flex items-center relative w-full cursor-pointer hover:shadow-[3px_3px_0px_#2b2622d9] transition-all">
           <div className="flex w-[41px] h-[29px] items-center gap-3 relative">
             <div className="relative w-[93px] h-[29px] mr-[-52.00px]">
               <div className="absolute top-0 left-px [font-family:'Space_Grotesk',Helvetica] font-bold text-white text-[22px] text-center tracking-[-0.22px] leading-[28.6px] whitespace-nowrap">
